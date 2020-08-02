@@ -1,0 +1,6 @@
+usr/local/bin/bigdatacash-qt usr/bin
+share/pixmaps/bitcoin32.xpm usr/share/pixmaps
+share/pixmaps/bitcoin16.xpm usr/share/pixmaps
+share/pixmaps/bitcoin128.png usr/share/pixmaps
+debian/bigdatacash-qt.desktop usr/share/applications
+debian/bigdatacash-qt.protocol usr/share/kde4/services/

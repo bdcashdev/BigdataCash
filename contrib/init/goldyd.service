@@ -1,0 +1,26 @@
+[Unit]
+Description=BIGDATACASH's distributed currency daemon
+After=network.target
+
+[Service]
+User=bigdatacash
+Group=bigdatacash
+
+Type=forking
+PIDFile=/var/lib/bigdatacashd/bigdatacashd.pid
+
+ExecStart=/usr/bin/bigdatacashd -daemon -pid=/var/lib/bigdatacashd/bigdatacashd.pid \
+          -conf=/etc/bigdatacash/bigdatacash.conf -datadir=/var/lib/bigdatacashd
+
+ExecStop=-/usr/bin/bigdatacash-cli -conf=/etc/bigdatacash/bigdatacash.conf \
+         -datadir=/var/lib/bigdatacashd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

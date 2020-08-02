@@ -1,0 +1,26 @@
+# /etc/conf.d/bigdatacashd: config file for /etc/init.d/bigdatacashd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/bigdatacash/bigdatacash.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/bigdatacashd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/bigdatacashd.pid"
+
+# Where to write bigdatacashd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/bigdatacashd"
+
+# User and group to own bigdatacashd process
+#BITCOIND_USER="bigdatacash"
+#BITCOIND_GROUP="bigdatacash"
+
+# Path to bigdatacashd executable
+#BITCOIND_BIN="/usr/bin/bigdatacashd"
+
+# Nice value to run bigdatacashd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

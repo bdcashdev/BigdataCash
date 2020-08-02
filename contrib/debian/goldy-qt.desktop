@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=BDCASH
+Comment=BDCASH P2P Cryptocurrency
+Comment[fr]=BDCASH, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=BDCASH, eşten eşe kriptografik sanal para birimi
+Exec=bigdatacash-qt %u
+Terminal=false
+Type=Application
+Icon=bigdatacash128
+MimeType=x-scheme-handler/bigdatacash;
+Categories=Office;Finance;
