@@ -2,8 +2,6 @@
 
 ## BigdataCash CryptoCurrency Digital
 
-**SPECS**
-
 ![alt tag](https://bigdatacash.online/img/specss.png)
 
 ## Reward Scheme
