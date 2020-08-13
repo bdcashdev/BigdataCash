@@ -4,8 +4,6 @@
 
 **SPECS**
 
-BIGDATACASH **(BDCASH)**
-
 ![alt tag](https://bigdatacash.online/img/specss.png)
 
 ## Reward Scheme
