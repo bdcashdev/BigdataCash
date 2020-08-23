@@ -32,6 +32,13 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
         return Params().ProofOfWorkLimit().GetCompact();
     }
 
+    //! flatten diff after 9650 for DGW3 history length
+    const int diffCorrection = 9650;
+    if (pindexLast->nHeight >= diffCorrection &&
+        pindexLast->nHeight <= (diffCorrection + (int)PastBlocksMin)) {
+        return Params().ProofOfWorkLimit().GetCompact();
+    }
+
     if (pindexLast->nHeight > Params().LAST_POW_BLOCK()) {
         uint256 bnTargetLimit = (~uint256(0) >> 20);
         int64_t nTargetSpacing = 180;
