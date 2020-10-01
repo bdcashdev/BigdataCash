@@ -194,8 +194,8 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 5;
-        strSporkKey = "0445c6b6f10c03af787fa3d80e5822b3457f0bee2beb98a4df545b7e8a98a837be8ee40e1b9b6b6226b102394054c2614553eb831bb0ac535435a39ab2990bf930";
-        strObfuscationPoolDummyAddress = "8HQAkg6Cq4hi8iuaY9uVkB6GiJUfq3fzQ4";
+        strSporkKey = "024857651f8a9977602e3142eb56db55d881b456d9aba747e59382aca34229f124";
+        strObfuscationPoolDummyAddress = "8VsWgf4WgxfKtvRVL4uYobdS3ydy6nCEWt";
         nStartMasternodePayments = 1596043182;
     }
 
@@ -289,8 +289,8 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "04dd78d703571dabd4ee783adae17178ed2e754ca8b5fd9e770ccb32283c5dd33e6c77c0917953eb681a06a46acc9769bb48066f6b4f900a87aed9843507fc3565";
-        strObfuscationPoolDummyAddress = "2jmcYi7kXQPV7rC6qMh2TidoVPGXGB2cqdP";
+        strSporkKey = "024857651f8a9977602e3142eb56db55d881b456d9aba747e59382aca34229f124";
+        strObfuscationPoolDummyAddress = "8VsWgf4WgxfKtvRVL4uYobdS3ydy6nCEWt";
         nStartMasternodePayments = 1596043184; //Fri, 09 Jan 2015 21:05:58 GMT
     }
     const Checkpoints::CCheckpointData& Checkpoints() const

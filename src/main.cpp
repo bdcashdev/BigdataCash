@@ -2175,6 +2175,29 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
             REJECT_INVALID, "bad-cb-amount");
     }
 
+    if (IsSporkActive(SPORK_18_BLOCK_ENFORCEMENT_DEFAULT) && ActiveProtocol() >= BLOCK_RECIPIENT_ENFORCEMENT) {
+        bool properStake = block.nNonce == 0;
+        unsigned int stakeRecipientSize = block.vtx[properStake].vout.size() - (int)properStake;
+        LogPrintf("block %d has %d recipients\n", pindex->nHeight, stakeRecipientSize);
+        if (stakeRecipientSize == 1) {
+            LogPrintf("  - block has incorrect masternode payment.\n");
+            if (IsSporkActive(SPORK_18_BLOCK_ENFORCEMENT_DEFAULT) && ActiveProtocol() >= BLOCK_RECIPIENT_ENFORCEMENT)
+                return false;
+        }
+        else {
+            auto mnOut = block.vtx[1].vout[stakeRecipientSize].nValue;
+            auto mnExp = GetMasternodePayment(pindex->nHeight, nExpectedMint, 0);
+            if (mnExp - mnOut > 100) {
+                LogPrintf("  - masternode hasnt received a reward (expected %llu, found %llu)\n", mnExp, mnOut);
+                if (IsSporkActive(SPORK_18_BLOCK_ENFORCEMENT_DEFAULT) && ActiveProtocol() >= BLOCK_RECIPIENT_ENFORCEMENT)
+                    return false;
+            }
+            else {
+                LogPrintf("  - masternode has received a reward (expected %llu, found %llu)\n", mnExp, mnOut);
+            }
+        }
+    }
+
     if (!control.Wait())
         return state.DoS(100, false);
     int64_t nTime2 = GetTimeMicros();
@@ -5338,21 +5361,9 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 //       it was the one which was commented out
 int ActiveProtocol()
 {
-    if (chainActive.Tip()->nHeight >= 131282 && chainActive.Tip()->nHeight < 197035) {
-      return 70813;
-    } else if (chainActive.Tip()->nHeight >= 197035 && chainActive.Tip()->nHeight < 207500) {
-      return 70814;
-    } else if (chainActive.Tip()->nHeight >= 207500 && chainActive.Tip()->nHeight < 286315) {
-      return 70815;
-    } else if (chainActive.Tip()->nHeight >= 286315 && chainActive.Tip()->nHeight < 329515) {
-      return 70816;
-    } else if (chainActive.Tip()->nHeight >= 329515 && chainActive.Tip()->nHeight < 383945) {
-      return 70817;
-    } else if (chainActive.Tip()->nHeight >= 383945) {
-      return 70818;
-    }
-
-    return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
+        if (chainActive.Tip()->nHeight >= 35000)
+            return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
+        return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 }
 
 // requires LOCK(cs_vRecvMsg)
