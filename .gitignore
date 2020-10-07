@@ -30,3 +30,17 @@
 *.exe
 *.out
 *.app
+
+.vs/BigdataCash/v16/.suo
+
+.vs/BigdataCash/v16/Browse.VC.db
+
+.vs/BigdataCash/v16/ipch/AutoPCH/21d3c1a3a38b1de8/POW.ipch
+
+.vs/CMake Overview
+
+.vs/ProjectSettings.json
+
+.vs/slnx.sqlite
+
+.vs/VSWorkspaceState.json
