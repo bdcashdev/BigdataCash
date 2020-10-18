@@ -47,7 +47,7 @@ static const int MAX_URI_LENGTH = 255;
 #define EXPORT_IMAGE_SIZE 256
 
 /* Number of frames in spinner animation */
-#define SPINNER_FRAMES 16
+#define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "BDCASH"
 #define QAPP_ORG_DOMAIN "bigdatacash.io"
