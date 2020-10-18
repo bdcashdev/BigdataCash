@@ -178,6 +178,7 @@ BITCOIN_QT_H = \
 RES_ICONS = \
   qt/res/icons/add@2x.png \
   qt/res/icons/add.png \
+  qt/res/icons/address-book.png \
   qt/res/icons/address-book@2x.png \
   qt/res/icons/bitcoin.icns \
   qt/res/icons/bitcoin.ico \
