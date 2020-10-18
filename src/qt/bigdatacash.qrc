@@ -90,22 +90,22 @@
 	<file alias="upArrow">res/images/upArrow.png</file>
     </qresource>
     <qresource prefix="/movies">
-        <file alias="spinner-000">res/movies/spinner-000@2x.png</file>
-        <file alias="spinner-001">res/movies/spinner-001@2x.png</file>
-        <file alias="spinner-002">res/movies/spinner-002@2x.png</file>
-        <file alias="spinner-003">res/movies/spinner-003@2x.png</file>
-        <file alias="spinner-004">res/movies/spinner-004@2x.png</file>
-        <file alias="spinner-005">res/movies/spinner-005@2x.png</file>
-        <file alias="spinner-006">res/movies/spinner-006@2x.png</file>
-        <file alias="spinner-007">res/movies/spinner-007@2x.png</file>
-        <file alias="spinner-008">res/movies/spinner-008@2x.png</file>
-        <file alias="spinner-009">res/movies/spinner-009@2x.png</file>
-        <file alias="spinner-010">res/movies/spinner-010@2x.png</file>
-        <file alias="spinner-011">res/movies/spinner-011@2x.png</file>
-        <file alias="spinner-012">res/movies/spinner-012@2x.png</file>
-        <file alias="spinner-013">res/movies/spinner-013@2x.png</file>
-        <file alias="spinner-014">res/movies/spinner-014@2x.png</file>
-        <file alias="spinner-015">res/movies/spinner-015@2x.png</file>
+        <file alias="spinner-000">res/movies/spinner-000.png</file>
+        <file alias="spinner-001">res/movies/spinner-001.png</file>
+        <file alias="spinner-002">res/movies/spinner-002.png</file>
+        <file alias="spinner-003">res/movies/spinner-003.png</file>
+        <file alias="spinner-004">res/movies/spinner-004.png</file>
+        <file alias="spinner-005">res/movies/spinner-005.png</file>
+        <file alias="spinner-006">res/movies/spinner-006.png</file>
+        <file alias="spinner-007">res/movies/spinner-007.png</file>
+        <file alias="spinner-008">res/movies/spinner-008.png</file>
+        <file alias="spinner-009">res/movies/spinner-009.png</file>
+        <file alias="spinner-010">res/movies/spinner-010.png</file>
+        <file alias="spinner-011">res/movies/spinner-011.png</file>
+        <file alias="spinner-012">res/movies/spinner-012.png</file>
+        <file alias="spinner-013">res/movies/spinner-013.png</file>
+        <file alias="spinner-014">res/movies/spinner-014.png</file>
+        <file alias="spinner-015">res/movies/spinner-015.png</file>
         <file alias="spinner-016">res/movies/spinner-016.png</file>
         <file alias="spinner-017">res/movies/spinner-017.png</file>
         <file alias="spinner-018">res/movies/spinner-018.png</file>
@@ -125,6 +125,7 @@
         <file alias="spinner-032">res/movies/spinner-032.png</file>
         <file alias="spinner-033">res/movies/spinner-033.png</file>
         <file alias="spinner-034">res/movies/spinner-034.png</file>
+        <file alias="spinner-035">res/movies/spinner-035.png</file>
     </qresource>
     <qresource prefix="/fonts">
         <file alias="lato-black">res/fonts/Lato-Black.ttf</file>
