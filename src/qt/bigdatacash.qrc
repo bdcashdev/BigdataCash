@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/icons">
         <file alias="bitcoin">res/icons/bitcoin.png</file>
-        <file alias="send">res/icons/send.png</file>
+        <file alias="send">res/icons/send@2x.png</file>
         <file alias="connect_0">res/icons/connect0_16@2x.png</file>
         <file alias="connect_1">res/icons/connect1_16@2x.png</file>
         <file alias="connect_2">res/icons/connect2_16@2x.png</file>
@@ -31,7 +31,7 @@
         <file alias="receiving_addresses@2x">res/icons/icon_receive@2x.png</file>
         <file alias="send_on@2x">res/icons/icon_send_on@2x.png</file>
         <file alias="send@2x">res/icons/icon_send@2x.png</file>
-	<file alias="address-book">res/icons/address-book.png</file>
+        <file alias="address-book">res/icons/address-book.png</file>
         <file alias="address-book@2x">res/icons/address-book@2x.png</file>
         <file alias="editpaste@2x">res/icons/editpaste@2x.png</file>
         <file alias="remove@2x">res/icons/remove@2x.png</file>
