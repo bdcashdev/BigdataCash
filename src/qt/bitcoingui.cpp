@@ -899,8 +899,7 @@ void BitcoinGUI::setNumBlocks(int count)
             int progress = 0;
 
             labelBlocksIcon->setPixmap(QIcon(QString(
-                                                 ":/movies/spinner-%1")
-                                                 .arg(spinnerFrame, 3, 10, QChar('0')))
+                                                 ":/movies/spinner-%1").arg(spinnerFrame, 3, 10, QChar('0')))
                                            .pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
             spinnerFrame = (spinnerFrame + 1) % SPINNER_FRAMES;
 
@@ -949,8 +948,7 @@ void BitcoinGUI::setNumBlocks(int count)
         tooltip = tr("Catching up...") + QString("<br>") + tooltip;
         if (count != prevBlocks) {
             labelBlocksIcon->setPixmap(QIcon(QString(
-                                                 ":/movies/spinner-%1")
-                                                 .arg(spinnerFrame, 3, 10, QChar('0')))
+                                                 ":/movies/spinner-%1").arg(spinnerFrame, 3, 10, QChar('0')))
                                            .pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
             spinnerFrame = (spinnerFrame + 1) % SPINNER_FRAMES;
         }
