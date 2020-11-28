@@ -59,14 +59,14 @@ bool CMasternodeConfig::read(std::string& strErr)
             if (CService(ip).GetPort() != Params().GetDefaultPort()) {
                 strErr = _("Invalid port detected in masternode.conf") + "\n" +
                          strprintf(_("Line: %d"), linenumber) + "\n\"" + line + "\"" + "\n" +
-                         _("(must be 30001 for mainnet)");
+                         _("(must be 36264 for mainnet)");
                 streamConfig.close();
                 return false;
             }
-        } else if (CService(ip).GetPort() == 30001) {
+        } else if (CService(ip).GetPort() == 36264) {
             strErr = _("Invalid port detected in masternode.conf") + "\n" +
                      strprintf(_("Line: %d"), linenumber) + "\n\"" + line + "\"" + "\n" +
-                     _("(30001 could be used only on mainnet)");
+                     _("(36264 could be used only on mainnet)");
             streamConfig.close();
             return false;
         }
