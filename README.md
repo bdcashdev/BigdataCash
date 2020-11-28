@@ -44,3 +44,28 @@ COLATERAL = 5000 BDCASH
 ==   100000-to end   =  1 BDCASH   25% POS   |  75% MN 
 
 =================================================
+
+##Social Network Links
+Twitter:  https://twitter.com/BigdataCash  
+
+ANN Official:  https://bitcointalk.org/index.php?topic=5244522 
+
+Discord:  https://discord.gg/rrr8vFS
+
+Reddit:  https://www.reddit.com/r/BigdataCash/
+
+Telegram Official: https://t.me/bigdatacash_official
+
+Telegram Indonesian: https://t.me/BigDataCash_Indonesia
+
+Official TikTok:  https://www.tiktok.com/@bigdatacash 
+
+##Market/Price  Data
+
+Coinpaprika:  https://coinpaprika.com/coin/bdcash-bigdatacash/
+
+Coingecko: https://coingecko.com/coins/bigdata-cash/
+
+Coinlore  https://www.coinlore.com/coin/bigdatacash/
+
+CoinmarketCap https://coinmarketcap.com/currencies/bigdatacash/
