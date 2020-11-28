@@ -1,6 +1,8 @@
 
 ##DESCRIPTION BIGDATACASH (BDCASH)
 
+=================================================
+
  TYPE = POS/MN
 
  ALGO = QUARK  
@@ -38,4 +40,7 @@ COLATERAL = 5000 BDCASH
 ==   80000  - 99999 =  2 BDCASH   25% POS  |  75% MN
 
 ==   100000-to end   =  1 BDCASH   25% POS   |  75% MN 
+
+==   100000-to end   =  1 BDCASH   25% POS   |  75% MN 
+
 =================================================
