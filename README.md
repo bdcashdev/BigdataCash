@@ -1,6 +1,5 @@
 
-##DESCRIPTION BIGDATACASH (BDCASH)
-
+DESCRIPTION BIGDATACASH (BDCASH)
 =================================================
 
  TYPE = POS/MN
@@ -21,17 +20,17 @@ LAST POW BLOCK = 10000
 
 COLATERAL = 5000 BDCASH 
 
-##========== SCHEME REWARD    ==============
+========== SCHEME REWARD    ==============
 
 ==    0000   - 00001 =      6,6%    Premine (SWAP) 
 
-==    0002    - 10000 =  1 BDCASH   N/A  |  N/A
+==    0002   -  10000 =  1 BDCASH   N/A  |  N/A
 
-==    10001   - 19999  =  2 BDCASH  25% POS  |  75% MN 
+==    10001  - 19999  =  2 BDCASH  25% POS  |  75% MN 
 
-==    20000 - 29999 =  3 BDCASH   25% POS  |  75% MN 
+==    20000  -  29999 =  3 BDCASH   25% POS  |  75% MN 
 
-==    30000 - 39999 =   1 BDCASH   25% POS  |  75% MN 
+==    30000  - 39999 =   1 BDCASH   25% POS  |  75% MN 
 
 ==    40000 - 59999 =  4 BDCASH   25% POS  |  75% MN 
 
@@ -45,7 +44,9 @@ COLATERAL = 5000 BDCASH
 
 =================================================
 
-##Social Network Links
+====== Social Network Links =======
+================================================
+
 Twitter:  https://twitter.com/BigdataCash  
 
 ANN Official:  https://bitcointalk.org/index.php?topic=5244522 
@@ -60,7 +61,7 @@ Telegram Indonesian: https://t.me/BigDataCash_Indonesia
 
 Official TikTok:  https://www.tiktok.com/@bigdatacash 
 
-##Market/Price  Data
+===== Market/Price  Data ===========
 
 Coinpaprika:  https://coinpaprika.com/coin/bdcash-bigdatacash/
 
