@@ -7,13 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>960</width>
-    <height>685</height>
+    <height>516</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>960</width>
-    <height>0</height>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>800</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -24,16 +30,16 @@
     <number>0</number>
    </property>
    <property name="leftMargin">
-    <number>35</number>
+    <number>5</number>
    </property>
    <property name="topMargin">
-    <number>42</number>
+    <number>5</number>
    </property>
    <property name="rightMargin">
-    <number>35</number>
+    <number>5</number>
    </property>
    <property name="bottomMargin">
-    <number>42</number>
+    <number>5</number>
    </property>
    <item>
     <widget class="QLabel" name="labelAlerts">
