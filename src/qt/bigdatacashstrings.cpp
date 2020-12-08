@@ -209,10 +209,10 @@ QT_TRANSLATE_NOOP("bigdatacash-core", ""
 QT_TRANSLATE_NOOP("bigdatacash-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("bigdatacash-core", "(36264 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("bigdatacash-core", "(30001 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("bigdatacash-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("bigdatacash-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("bigdatacash-core", "(must be 36264 for mainnet)"),
+QT_TRANSLATE_NOOP("bigdatacash-core", "(must be 30001 for mainnet)"),
 QT_TRANSLATE_NOOP("bigdatacash-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("bigdatacash-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("bigdatacash-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
