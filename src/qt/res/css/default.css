@@ -4,7 +4,7 @@
 
 
 WalletFrame {
-    /*border-image: url(':/images/walletFrame_bg') 0 0 0 0 stretch stretch;*/
+    border-image: url(':/images/walletFrame_bg') 0 0 0 0 stretch stretch;
     background: #ca9744;
     border: 0 none;
     margin: 0;
@@ -26,7 +26,6 @@ QStatusBar #progress_bar_label {
     padding: 0 8px;
 }
 QStatusBar #progress_bar {
-    border-radius: 4px;
     border: 1px solid #99a2b2;
     color: #000000;
     text-align: center;
@@ -127,7 +126,6 @@ background-color:#F8F6F6;
 QProgressBar {
 color:#d2d2d2;
 border:2px solid grey;
-border-radius:5px;
 background-color:transparent;
 }
 
@@ -283,7 +281,6 @@ QPushButton:pressed,
 
 /* Form elements */
 QLineEdit { /* inputs */
-    border-radius: 4px;
     border: 1px solid #fb8f02;
     padding: 5px;
     font: 12px "Volte";
@@ -628,7 +625,7 @@ QDialog .QTabWidget .QWidget QComboBox {
 min-height:15px;
 }
 QDialog .QPushButton {
-    border-radius: 18px;
+    border-radius: none;
 }
 
 /**************************** FILE MENU *************************************************/
@@ -802,7 +799,7 @@ QDialog#MultiSendDialog QPushButton#deleteButton,
 QDialog#MultiSendDialog QPushButton#activateButton,
 QDialog#MultiSendDialog QPushButton#disableButton,
 QDialog#MultiSendDialog .QPushButton {
-    border-radius: 9px;
+
 }*/
 
 /**************************** BIP DIALOG ***********************************/
@@ -938,7 +935,6 @@ padding-right:5px;
 
 QWidget .QFrame#frame { /* Wallet Balance */
     background: #fff;
-    border-radius: 8px;
     margin: 0;
     padding: 0 0 20px 0;
     min-width: 364px;
@@ -987,11 +983,10 @@ QWidget .QFrame#frame .QLabel#lineBalances { /* Available Balance Label Line */
 }
 QWidget .QFrame#frame .QLabel#labelBalance { /* Available Balance */
     qproperty-alignment: 'AlignVCenter | AlignLeft';
-    background: #000000;
-    border-left: 10px solid #fb8f02;
-    border-top-right-radius: 6px;
-    color: #fff;
-    font: 700 15px "Volte Bold"; /* Volte Bold, 17px */
+    background: #fb8f02;
+    border-left: 8px solid #fb8f02;
+    color: rgb(0, 0, 0);
+    font: 700 12px "Volte Bold"; /* Volte Bold, 17px */
     height: 57px;
     margin: 0;
     min-height: 57px;
@@ -999,11 +994,11 @@ QWidget .QFrame#frame .QLabel#labelBalance { /* Available Balance */
 }
 QWidget .QFrame#frame .QLabel#labelWatchAvailable { /* Watch-only Balance */
     qproperty-alignment: 'AlignVCenter | AlignLeft';
-    background: #000000;
+    background: #fb8f02;
     border-left: 0px solid #fb8f02;
     border-top-right-radius: 6px;
-    color: #fff;
-    font: 700 15px "Volte Bold"; /* Volte Bold, 17px */
+    color: rgb(0, 0, 0);
+    font: 700 8px "Volte Bold"; /* Volte Bold, 17px */
     height: 57px;
     margin: 0;
     min-height: 57px;
@@ -1015,7 +1010,7 @@ QWidget .QFrame#frame .QLabel#labelWalletStatus,
 QWidget .QFrame#frame .QLabel#labelWalletStatusSpacer1,
 QWidget .QFrame#frame .QLabel#labelWalletStatusSpacer2 { /* Wallet Sync Status */
     qproperty-alignment: 'AlignVCenter | AlignLeft';
-    background: #fb8f02;
+    background: #fb7a02;
     color: #fff;
     font: 250 14px "Volte Regular"; /* Volte Regular, 14px */
     margin: 5px 0;
@@ -1135,7 +1130,7 @@ QWidget .QFrame#frameObfuscation .QLabel#lineObfuscation { /* Available Balance 
 
 QWidget .QFrame#frameObfuscation .QLabel#labelObfuscationSyncStatus { /* Obfuscation Sync Status */
     qproperty-alignment: 'AlignVCenter | AlignHCenter';
-    background: #fb8f02;
+    background: #fb5102;
     color: #fff;
     font: 250 13px "Volte Regular"; /* Volte Regular, 14px */
     margin: 15px 0;
@@ -1382,7 +1377,7 @@ QWidget .QFrame#frame_2 .QLabel#lineTransactions { /* Available Balance Label Li
 
 QWidget .QFrame#frame_2 .QLabel#labelTransactionsStatus { /* Recent Transactions Sync Status */
     qproperty-alignment: 'AlignVCenter | AlignHCenter';
-    background: #fb8f02;
+    background: #fb6602;
     color: #fff;
     font: 250 14px "Volte Regular"; /* Volte Regular, 14px */
     margin: 5px 0;
