@@ -1,20 +1,20 @@
-Name "BDCASH Core (-bit)"
+Name "BDCASH Core (64-bit)"
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 1.0.0
+!define VERSION 1.3.0
 !define COMPANY "BDCASH"
 !define URL http://www.bigdatacash.io
 
 # MUI Symbol Definitions
-!define MUI_ICON "/mnt/c/b8c/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/mnt/c/b8c/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/mnt/c/BigdataCash/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/mnt/c/BigdataCash/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/mnt/c/b8c/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/mnt/c/BigdataCash/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
@@ -22,13 +22,13 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER "BDCASH Core"
 !define MUI_FINISHPAGE_RUN $INSTDIR\bigdatacash-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/mnt/c/b8c/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/mnt/c/BigdataCash/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
 !include Sections.nsh
 !include MUI2.nsh
-!if "" == "64"
+!if "64" == "64"
 !include x64.nsh
 !endif
 
@@ -48,8 +48,8 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /mnt/c/b8c/bigdatacash-${VERSION}-win-setup.exe
-!if "" == "64"
+OutFile /mnt/c/BigdataCash/bigdatacash-${VERSION}-win64-setup.exe
+!if "64" == "64"
 InstallDir $PROGRAMFILES64\BDCASH
 !else
 InstallDir $PROGRAMFILES\BDCASH
@@ -73,14 +73,14 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /mnt/c/b8c/release/bigdatacash-qt.exe
-    File /oname=COPYING.txt /mnt/c/b8c/COPYING
-    File /oname=readme.txt /mnt/c/b8c/doc/README_windows.txt
+    File /mnt/c/BigdataCash/release/bigdatacash-qt.exe
+    File /oname=COPYING.txt /mnt/c/BigdataCash/COPYING
+    File /oname=readme.txt /mnt/c/BigdataCash/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /mnt/c/b8c/release/bigdatacashd.exe
-    File /mnt/c/b8c/release/bigdatacash-cli.exe
+    File /mnt/c/BigdataCash/release/bigdatacashd.exe
+    File /mnt/c/BigdataCash/release/bigdatacash-cli.exe
     SetOutPath $INSTDIR\doc
-    File /r /mnt/c/b8c/doc\*.*
+    File /r /mnt/c/BigdataCash/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 
@@ -160,7 +160,7 @@ SectionEnd
 # Installer functions
 Function .onInit
     InitPluginsDir
-!if "" == "64"
+!if "64" == "64"
     ${If} ${RunningX64}
       ; disable registry redirection (enable access to 64-bit portion of registry)
       SetRegView 64
