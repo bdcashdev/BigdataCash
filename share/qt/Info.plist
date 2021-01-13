@@ -17,7 +17,7 @@
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>1.3.0, Copyright © 2009-2019 The Bitcoin Core developers, 2014-2019 The Dash Core developers, 2015-2019 The BDCASH developers</string>
+  <string>1.3.0, Copyright © 2009-2019 The Bitcoin Core developers, 2014-2019 The Dash Core developers, 2020-2021 The BDCASH developers</string>
 
   <key>CFBundleShortVersionString</key>
   <string>1.3.0</string>
