@@ -9,7 +9,7 @@ Block time | 60 seconds
 Maximum supply | 15,000,000(15M) 
 Consensus mechanism | Proof-of-Stake
 Algorithm | Quark
-Collateral | 5,000 DNO
+Collateral | 5,000 
 RPC/P2P main Port | 36264/36263
 RPCP2P testnet Port | 37264 / 37263
 
