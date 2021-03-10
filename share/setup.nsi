@@ -7,7 +7,7 @@ SetCompressor /SOLID lzma
 !define REGKEY "SOFTWARE\$(^Name)"
 !define VERSION 1.3.0
 !define COMPANY "BDCASH"
-!define URL http://www.bigdatacash.io
+!define URL http://www.bigdatacash.online
 
 # MUI Symbol Definitions
 !define MUI_ICON "/mnt/c/BigdataCash/share/pixmaps/bitcoin.ico"
