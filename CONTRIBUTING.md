@@ -56,5 +56,5 @@ To contribute a patch, the workflow is as follows:
 
 ### Rewards
 
-All contributors can receive rewards for helping to improve our code, just make your commit and we will contact you soon.
+All contributors can receive rewards for helping to improve our code, just make your commit and we will contact you soon, payment in BDCASH.
 
