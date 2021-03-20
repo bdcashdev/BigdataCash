@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2020 The BDCASH developers
+// Copyright (c) 2021 The BDCASH developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1611,8 +1611,14 @@ int64_t GetBlockValue(int nHeight)
     	return 3 * COIN;
     } else if (nHeight >= 80000 && nHeight < 100000) { 
     	return 2 * COIN;
-    } else if (nHeight >= 100000) { 
+    } else if (nHeight >= 100000 && nHeight < 150000) { 
     	return 1 * COIN;
+    } else if (nHeight >= 150000 && nHeight < 200000) { 
+    	return 0.75 * COIN;
+    } else if (nHeight >= 200000 && nHeight < 300000) { 
+    	return 0.5 * COIN;
+    } else if (nHeight >= 300000) { 
+    	return 0.25 * COIN;
     }
 
     return nSubsidy;
@@ -1624,8 +1630,14 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 
     if (nHeight < 10000) {
       ret = blockValue * 0;
+    }else if (nHeight > 10000 && nHeight < 150000) {
+      ret = blockValue/100*75;
+    }else if (nHeight >= 150000 && nHeight < 200000) {
+      ret = blockValue/100*80;
+    }else if (nHeight >= 200000 && nHeight < 300000) {
+      ret = blockValue/100*90;
     } else {
-    ret = blockValue/100*75;    
+    ret = blockValue/100*70;    
     }
     
 

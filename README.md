@@ -24,8 +24,11 @@ From | To | Rewards | Masternode | Staker |
 30000     | 39999    | 1     | 75% | 25% 
 40000     | 59999    | 4     | 75% | 25% 
 60000     | 79999    | 3     | 75% | 25% 
-80000     | 99999    | 2     | 75% | 25% 
-100000     | to end    | 1     | 75% | 25% 
+80000     | 99999    | 2     | 75% | 25%
+100000    | 149999   | 1     | 75% | 25% 
+150000    | 199999   | 0.75  | 80% | 20% 
+200000    | 299999   | 0.5   | 90% | 10% 
+300000    | to end   | 0.25  | 70% | 30% 
 
 ### Social Network
  
@@ -49,3 +52,5 @@ Coinlore  https://www.coinlore.com/coin/bigdatacash
 CoinmarketCap https://coinmarketcap.com/currencies/bigdatacash/
 
 Coinlib: https://coinlib.io/coin/BDCASH/BigDataCash/
+
+Livecoinwatch : https://www.livecoinwatch.com/price/BigdataCash-BDCASH
