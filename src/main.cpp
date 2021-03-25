@@ -1597,49 +1597,56 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex)
 
 int64_t GetBlockValue(int nHeight)
 {
-    int64_t nSubsidy = 1 * COIN;
+    int64_t nSubsidy = 0;
 
-    if (nHeight < 2 && nHeight > 0) {
-    	return 1000000 * COIN;
-	} else if (nHeight >= 10000 && nHeight < 20000) {
-    	return 2 * COIN;
-    } else if (nHeight >= 20000 && nHeight < 30000) {
-    	return 3 * COIN;
-    } else if (nHeight >= 40000 && nHeight < 60000) {
-    	return 4 * COIN;
-    } else if (nHeight >= 60000 && nHeight < 80000) { 
-    	return 3 * COIN;
-    } else if (nHeight >= 80000 && nHeight < 100000) { 
-    	return 2 * COIN;
-    } else if (nHeight >= 100000 && nHeight < 150000) { 
-    	return 1 * COIN;
-    } else if (nHeight >= 150000 && nHeight < 200000) { 
-    	return 0.75 * COIN;
-    } else if (nHeight >= 200000 && nHeight < 300000) { 
-    	return 0.5 * COIN;
-    } else if (nHeight >= 300000) { 
-    	return 0.25 * COIN;
+    if (ActiveProtocol() >= REWARD_CHANGE) {
+        if (nHeight > 300000)  nSubsidy = .25 * COIN;
+        if (nHeight > 200000)  nSubsidy = .5  * COIN;
+        if (nHeight > 150000)  nSubsidy = .75 * COIN;
+        if (nHeight > 100000)  nSubsidy = 1   * COIN;
+        if (nHeight > 80000)   nSubsidy = 2   * COIN;
+        if (nHeight > 60000)   nSubsidy = 3   * COIN;
+        if (nHeight > 40000)   nSubsidy = 1   * COIN;
+        if (nHeight > 20000)   nSubsidy = 3   * COIN;
+        if (nHeight > 10000)   nSubsidy = 3   * COIN;
+        if (nHeight != 1)      nSubsidy = 2   * COIN;
+        nSubsidy = 1000000 * COIN;
+    }else{
+        if (nHeight > 100000)  nSubsidy = 1 * COIN;
+        if (nHeight > 80000)   nSubsidy = 2 * COIN;
+        if (nHeight > 60000)   nSubsidy = 3 * COIN;
+        if (nHeight > 40000)   nSubsidy = 1 * COIN;
+        if (nHeight > 20000)   nSubsidy = 3 * COIN;
+        if (nHeight > 10000)   nSubsidy = 3 * COIN;
+        if (nHeight != 1)      nSubsidy = 2 * COIN;
+        nSubsidy = 1000000 * COIN;
     }
+    // Check if we reached the coin max supply.
+    int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
+
+    if (nMoneySupply + nSubsidy >= Params().MaxMoneyOut())
+        nSubsidy = Params().MaxMoneyOut() - nMoneySupply;
+    if (nMoneySupply >= Params().MaxMoneyOut())
+        nSubsidy = 0;
 
     return nSubsidy;
+
 }
 
 int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCount)
 {
     int64_t ret = 0;
 
-    if (nHeight < 10000) {
-      ret = blockValue * 0;
-    }else if (nHeight > 10000 && nHeight < 150000) {
-      ret = blockValue/100*75;
-    }else if (nHeight >= 150000 && nHeight < 200000) {
-      ret = blockValue/100*80;
-    }else if (nHeight >= 200000 && nHeight < 300000) {
-      ret = blockValue/100*90;
-    } else {
-    ret = blockValue/100*70;    
-    }
-    
+    if (ActiveProtocol() >= REWARD_CHANGE) {
+        if (nHeight > 300000) ret = blockValue / 100 * 90;
+        if (nHeight > 200000) ret = blockValue / 100 * 80;
+        if (nHeight > 150000) ret = blockValue / 100 * 75;
+        if (nHeight > 10000)  ret = blockValue / 100 * 70;
+        ret = blockValue * 0;        
+    }else{
+        if (nHeight > 10000) ret = blockValue / 100 * 70;
+        ret = blockValue * 0;
+    }    
 
     return ret;
 }
@@ -5350,19 +5357,8 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 //       it was the one which was commented out
 int ActiveProtocol()
 {
-    if (chainActive.Tip()->nHeight >= 131282 && chainActive.Tip()->nHeight < 197035) {
-      return 70813;
-    } else if (chainActive.Tip()->nHeight >= 197035 && chainActive.Tip()->nHeight < 207500) {
-      return 70814;
-    } else if (chainActive.Tip()->nHeight >= 207500 && chainActive.Tip()->nHeight < 286315) {
-      return 70815;
-    } else if (chainActive.Tip()->nHeight >= 286315 && chainActive.Tip()->nHeight < 329515) {
-      return 70816;
-    } else if (chainActive.Tip()->nHeight >= 329515 && chainActive.Tip()->nHeight < 383945) {
-      return 70817;
-    } else if (chainActive.Tip()->nHeight >= 383945) {
-      return 70818;
-    }
+    if (IsSporkActive(SPORK_14_NEW_PROTOCOL_ENFORCEMENT))
+        return MIN_PEER_PROTO_VERSION_AFTER_ENFORCEMENT;
 
     return MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT;
 }

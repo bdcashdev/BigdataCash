@@ -95,6 +95,8 @@ bool IsSporkActive(int nSporkID)
         if (nSporkID == SPORK_14_NEW_PROTOCOL_ENFORCEMENT) r = SPORK_14_NEW_PROTOCOL_ENFORCEMENT_DEFAULT;
         if (nSporkID == SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2) r = SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2_DEFAULT;
         if (nSporkID == SPORK_16_MN_WINNER_MINIMUM_AGE) r = SPORK_16_MN_WINNER_MINIMUM_AGE_DEFAULT;
+        if (nSporkID == SPORK_17_PROPOSAL_VETO) r = SPORK_17_PROPOSAL_VETO_DEFAULT;
+        if (nSporkID == SPORK_18_SKIP_SYNC) r = SPORK_18_SKIP_SYNC_DEFAULT;
 
         if (r == -1) LogPrintf("GetSpork::Unknown Spork %d\n", nSporkID);
     }
@@ -125,6 +127,7 @@ int64_t GetSporkValue(int nSporkID)
         if (nSporkID == SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2) r = SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2_DEFAULT;
         if (nSporkID == SPORK_16_MN_WINNER_MINIMUM_AGE) r = SPORK_16_MN_WINNER_MINIMUM_AGE_DEFAULT;
         if (nSporkID == SPORK_17_PROPOSAL_VETO) r = SPORK_17_PROPOSAL_VETO_DEFAULT; 
+        if (nSporkID == SPORK_18_SKIP_SYNC) r = SPORK_18_SKIP_SYNC_DEFAULT;
 
         if (r == -1) LogPrintf("GetSpork::Unknown Spork %d\n", nSporkID);
     }
@@ -274,6 +277,7 @@ int CSporkManager::GetSporkIDByName(std::string strName)
     if (strName == "SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2") return SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2;
     if (strName == "SPORK_16_MN_WINNER_MINIMUM_AGE") return SPORK_16_MN_WINNER_MINIMUM_AGE;
     if (strName == "SPORK_17_PROPOSAL_VETO") return SPORK_17_PROPOSAL_VETO;
+    if (strName == "SPORK_18_SKIP_SYNC") return SPORK_18_SKIP_SYNC;
 
     return -1;
 }
@@ -294,6 +298,7 @@ std::string CSporkManager::GetSporkNameByID(int id)
     if (id == SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2) return "SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2";
     if (id == SPORK_16_MN_WINNER_MINIMUM_AGE) return "SPORK_16_MN_WINNER_MINIMUM_AGE";
     if (id == SPORK_17_PROPOSAL_VETO) return "SPORK_17_PROPOSAL_VETO";
+    if (id == SPORK_18_SKIP_SYNC return "SPORK_18_SKIP_SYNC";
 
     return "Unknown";
 }

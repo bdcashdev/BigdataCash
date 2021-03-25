@@ -18,6 +18,7 @@
 #include "primitives/transaction.h"
 #include "timedata.h"
 #include "util.h"
+#include "spork.h"
 #include "utilmoneystr.h"
 #ifdef ENABLE_WALLET
 #include "wallet.h"
@@ -456,7 +457,9 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
 
     //control the amount of times the client will check for mintable coins
     static bool fMintableCoins = false;
+    bool fMasternodeSync = false;
     static int nMintableLastCheck = 0;
+    fMasternodeSync = IsSporkActive(SPORK_18_SKIP_SYNC) || !masternodeSync.IsSynced();
 
     if (fProofOfStake && (GetTime() - nMintableLastCheck > 5 * 60)) // 5 minute check time
     {
@@ -471,12 +474,12 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
                 continue;
             }
 
-            while (chainActive.Tip()->nTime < 1471482000 || vNodes.size() < 3 || pwallet->IsLocked() || !fMintableCoins || nReserveBalance >= pwallet->GetBalance() || !masternodeSync.IsSynced()) {
-                nLastCoinStakeSearchInterval = 0;
-                MilliSleep(5000);
-                if (!fGenerateBitcoins && !fProofOfStake)
-                    continue;
-            }
+                while (chainActive.Tip()->nTime < 1471482000 || vNodes.size() < 3 || pwallet->IsLocked() || !fMintableCoins || nReserveBalance >= pwallet->GetBalance() || !fMasternodeSync) {
+                    nLastCoinStakeSearchInterval = 0;
+                    MilliSleep(5000);
+                    if (!fGenerateBitcoins && !fProofOfStake)
+                        continue;
+                }
 
             if (mapHashedBlocks.count(chainActive.Tip()->nHeight)) //search our map of hashed blocks, see if bestblock has been hashed yet
             {
