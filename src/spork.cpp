@@ -298,7 +298,7 @@ std::string CSporkManager::GetSporkNameByID(int id)
     if (id == SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2) return "SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2";
     if (id == SPORK_16_MN_WINNER_MINIMUM_AGE) return "SPORK_16_MN_WINNER_MINIMUM_AGE";
     if (id == SPORK_17_PROPOSAL_VETO) return "SPORK_17_PROPOSAL_VETO";
-    if (id == SPORK_18_SKIP_SYNC return "SPORK_18_SKIP_SYNC";
+    if (id == SPORK_18_SKIP_SYNC) return "SPORK_18_SKIP_SYNC";
 
     return "Unknown";
 }
