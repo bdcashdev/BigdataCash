@@ -1606,7 +1606,8 @@ int64_t GetBlockValue(int nHeight)
         if (nHeight > 100000)  nSubsidy = 1   * COIN;
         if (nHeight > 80000)   nSubsidy = 2   * COIN;
         if (nHeight > 60000)   nSubsidy = 3   * COIN;
-        if (nHeight > 40000)   nSubsidy = 1   * COIN;
+        if (nHeight > 40000)   nSubsidy = 4   * COIN;
+        if (nHeight > 30000)   nSubsidy = 1   * COIN;
         if (nHeight > 20000)   nSubsidy = 3   * COIN;
         if (nHeight > 10000)   nSubsidy = 3   * COIN;
         if (nHeight > 1)       nSubsidy = 2   * COIN;
@@ -1615,7 +1616,8 @@ int64_t GetBlockValue(int nHeight)
         if (nHeight > 100000)  nSubsidy = 1 * COIN;
         if (nHeight > 80000)   nSubsidy = 2 * COIN;
         if (nHeight > 60000)   nSubsidy = 3 * COIN;
-        if (nHeight > 40000)   nSubsidy = 1 * COIN;
+        if (nHeight > 40000)   nSubsidy = 4 * COIN;
+        if (nHeight > 30000)   nSubsidy = 1 * COIN;
         if (nHeight > 20000)   nSubsidy = 3 * COIN;
         if (nHeight > 10000)   nSubsidy = 3 * COIN;
         if (nHeight > 1)       nSubsidy = 2 * COIN;
