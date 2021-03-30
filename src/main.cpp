@@ -1639,14 +1639,12 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     int64_t ret = 0;
 
     if (ActiveProtocol() >= REWARD_CHANGE) {
-        if (nHeight > 300000) ret = blockValue / 100 * 90;
-        if (nHeight > 200000) ret = blockValue / 100 * 80;
-        if (nHeight > 150000) ret = blockValue / 100 * 75;
-        if (nHeight > 10000)  ret = blockValue / 100 * 70;
-        ret = blockValue * 0;        
+        if (nHeight > 10000 && nHeight < 150000)   ret = blockValue / 100 * 75;
+        if (nHeight >= 150000 && nHeight < 200000) ret = blockValue / 100 * 80;
+        if (nHeight >= 200000 && nHeight < 300000) ret = blockValue / 100 * 90;      
     }else{
+        if (nHeight < 10000) ret = blockValue * 0;
         if (nHeight > 10000) ret = blockValue / 100 * 70;
-        ret = blockValue * 0;
     }    
 
     return ret;
