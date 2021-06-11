@@ -1,7 +1,7 @@
 Cross-compiliation of BDCASH Core
 ===============================
 
-Recap Core can be cross-compiled on Linux to all other supported host systems. This is done by changing
+BDCASH Core can be cross-compiled on Linux to all other supported host systems. This is done by changing
 the `HOST` parameter when building the dependencies and then specifying another `--prefix` directory when building BDCASH.
 
 The following instructions are only tested on Debian Stretch and Ubuntu Bionic.
