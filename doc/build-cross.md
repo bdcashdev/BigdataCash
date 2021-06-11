@@ -1,8 +1,8 @@
-Cross-compiliation of Recap Core
+Cross-compiliation of BDCASH Core
 ===============================
 
 Recap Core can be cross-compiled on Linux to all other supported host systems. This is done by changing
-the `HOST` parameter when building the dependencies and then specifying another `--prefix` directory when building Recap.
+the `HOST` parameter when building the dependencies and then specifying another `--prefix` directory when building BDCASH.
 
 The following instructions are only tested on Debian Stretch and Ubuntu Bionic.
 
@@ -29,7 +29,7 @@ When building the dependencies, as described in [build-generic](build-generic.md
 $ make HOST=x86_64-apple-darwin11 -j4
 ```
 
-When building Recap Core, use
+When building BDCASH Core, use
 
 ```bash
 $ ./configure --prefix=`pwd`/depends/x86_64-apple-darwin11
@@ -103,7 +103,7 @@ When building the dependencies, as described in [build-generic](build-generic.md
 $ make HOST=arm-linux-gnueabihf -j4
 ```
 
-When building Recap Core, use
+When building BDCASH Core, use
 
 ```bash
 $ ./configure --prefix=`pwd`/depends/arm-linux-gnueabihf
