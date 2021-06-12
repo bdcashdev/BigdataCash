@@ -33,26 +33,26 @@ Follow the instructions in [build-generic](build-generic.md)
 Running
 -------
 
-Recap Core is now available at `./src/recapd`
+BDCASH Core is now available at `./src/bigdatacashd`
 
 Before running, it's recommended you create an RPC configuration file.
 
-    echo -e "rpcuser=recaprpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/RecapCore/recap.conf"
+    echo -e "rpcuser=bigdatacashrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/bigdatacash/bigdatacash.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/RecapCore/recap.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/bigdatacash/bigdatacash.conf"
 
 The first time you run recapd, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
-    tail -f $HOME/Library/Application\ Support/RecapCore/debug.log
+    tail -f $HOME/Library/Application\ Support/bigdatacash/debug.log
 
 Other commands:
 -------
 
-    ./src/recapd -daemon # Starts the recap daemon.
-    ./src/recap-cli --help # Outputs a list of command-line options.
-    ./src/recap-cli help # Outputs a list of RPC commands when the daemon is running.
+    ./src/bigdatacashd -daemon # Starts the bigdatacash daemon.
+    ./src/bigdatacash-cli --help # Outputs a list of command-line options.
+    ./src/bigdatacash-cli help # Outputs a list of RPC commands when the daemon is running.
 
 Using Qt Creator as IDE
 ------------------------
