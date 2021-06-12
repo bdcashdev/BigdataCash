@@ -7,7 +7,7 @@ Coin Name | BigdataCash
 Ticker | BDCASH
 Block time | 60 seconds
 Maximum supply | 15,000,000(15M) 
-Consensus mechanism | Proof-of-Stake
+Consensus mechanism | Proof-of-Stake / Masternode
 Algorithm | Quark
 Collateral | 5,000 
 RPC/P2P main Port | 36264/36263
